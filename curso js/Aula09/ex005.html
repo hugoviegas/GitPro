@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Primeira aula de DOM</title>
+    <style>
+        body {
+            background-color: rgb(53, 53, 112);
+            color: white;
+            font: normal 18pt Arial
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos com o DOM</h1> <!--h1 define título principal-->
+    <p>Aqui vai o resultado</p> <!--p define paragrafo-->
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript</p> <!--strong deixa em negrito-->
+    <div class="test">Clique em mim </div> <!--cria uma divisão com a classe test-->
+    <script>
+        var corpo = window.document.body
+        var p1 = window.document.getElementsByTagName('p')[1] //pega um elemento por tag 
+        window.document.write(p1.innerText) //escreve o que está dentro da variavel do elemento lá
+        
+        p1.style.color = 'blue'
+        corpo.style.background = 'gray'
+        var test = window.document.querySelector('div.test')
+        window.document.write(test.innerText)
+        test.style.background = 'pink'
+        
+        var d = window.document.querySelector('div.test')
+        //d.style.background = 'gray'
+    </script>
+</body>
+</html>

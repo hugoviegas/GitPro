@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Nacionalidade</title>
+</head>
+<body>
+    <h1>Sistema de descendencia</h1>
+    Em qual país você nasceu?
+    <input type="text" nome="txtnac" id="txtnac">
+    <input type="button" value="verficar" onclick="mostrar()">
+    <div id="res">
+
+    </div>
+    <script>
+        function mostrar() {
+            var res = window.document.querySelector('div#res')
+            var txtn = window.document.getElementById('txtnac')
+            
+            var pais = String(txtn.value)
+            res.innerHTML = `Vivendo em ${pais}`
+            
+        if (pais == 'Brasil') {
+            res.innerHTML = 'Você é brasileiro'
+        }   else {
+            res.innerHTML = 'Você é estranjeiro'
+        }
+       
+        }
+        
+    </script>
+</body>
+</html>
